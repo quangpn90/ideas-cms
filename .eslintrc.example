@@ -1,0 +1,85 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "env": {
+      "es6": true,
+      "browser": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:mdx/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:prettier/recommended",
+      "prettier/react",
+      "prettier/standard",
+      "prettier"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx", ".mdx"]
+        }
+      }
+    },
+    "rules": {
+      "mdx/no-unused-expressions": "off",
+      "no-unused-expressions": "off",
+      "comma-dangle": "off",
+      "no-plusplus": "off",
+      "import/no-unresolved": "off",
+      "react/jsx-filename-extension": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/require-default-props": "off",
+      "react/forbid-prop-types": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/control-has-associated-label": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/destructuring-assignment": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "camelcase": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "bracketSpacing": true,
+          "printWidth": 120,
+          "singleQuote": true,
+          "trailingComma": "all",
+          "tabWidth": 2,
+          "useTabs": false,
+          "endOfLine": "auto"
+        }
+      ],
+  
+      "import/extensions": [
+        "warn",
+        "ignorePackages",
+        {
+          "tsx": "never",
+          "ts": "never",
+          "js": "never",
+          "jsx": "never"
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "react/prop-types": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": ["**/*.test.*"],
+          "optionalDependencies": false,
+          "peerDependencies": false
+        }
+      ],
+      "react/jsx-one-expression-per-line": 0,
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error"]
+    }
+  }
+  
